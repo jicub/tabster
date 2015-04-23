@@ -1,0 +1,41 @@
+@media only screen and (max-width : 320px){
+	.main-nav {
+
+		li {
+			float:none;
+			border-bottom: 1px solid rgb(69, 67, 67);
+			border-left:none;
+
+			&:last-child {
+				border-bottom:none;
+			}
+		}
+
+		a {
+			font-size: 1em;
+		}
+	}
+
+	.contact {
+		font-size: 1.2em;
+	}
+
+	.btn-buy {
+		//border-right: none;
+		//border-top: 1px solid rgb(69, 67, 67);
+	}
+
+	#home {
+		img {
+			max-width:100%;
+		}
+	}
+}
+
+@media only screen and (max-width : 980px){
+	 .page {
+		width:95%;
+		padding:0;
+		margin:auto;
+	 }
+}

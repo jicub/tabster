@@ -1,0 +1,139 @@
+
+//Animation
+//Animation Speeds
+$menuOnScreenSpeed: 400ms;
+$menuOnScreenMethod: ease;
+$pageOffScreenSpeed: 500ms;
+$pageOffScreenMethod: ease;
+$transitionSpeed: 0.3s;
+$transitionMethod: ease;
+
+
+/* Fade Out */
+@-moz-keyframes fade-it-out {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fade-it-out{
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-it-out {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Fade In */
+@-moz-keyframes fade-it-in {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-it-in{
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-it-in {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@mixin transition {
+    -webkit-transition: -webkit-transform $transitionSpeed $transitionMethod;
+    -moz-transition: -moz-transform $transitionSpeed $transitionMethod;
+    -o-transition: -o-transform $transitionSpeed $transitionMethod;
+    -ms-transition: -ms-transform $transitionSpeed $transitionMethod;
+    transition: transform $transitionSpeed $transitionMethod;
+}
+
+.js-page-off-screen {
+    -webkit-transform: translate3d(125%, 0, 0);
+    transform: translate3d(125%, 0, 0);
+
+    -webkit-transition: -webkit-transform $pageOffScreenSpeed $pageOffScreenMethod;
+    -moz-transition: -moz-transform $pageOffScreenSpeed $pageOffScreenMethod;
+    -o-transition: -o-transform $pageOffScreenSpeed $pageOffScreenMethod;
+    -ms-transition: -ms-transform $pageOffScreenSpeed $pageOffScreenMethod;
+    transition: transform $pageOffScreenSpeed $pageOffScreenMethod;
+}
+
+.js-menu-on-screen {
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+
+    -webkit-transition: -webkit-transform $menuOnScreenSpeed $menuOnScreenMethod;
+    -moz-transition: -moz-transform $menuOnScreenSpeed $menuOnScreenMethod;
+    -o-transition: -o-transform $menuOnScreenSpeed $menuOnScreenMethod;
+    -ms-transition: -ms-transform $menuOnScreenSpeed $menuOnScreenMethod;
+    transition: transform $menuOnScreenSpeed $menuOnScreenMethod;
+}
+
+.js-fade-out {
+    animation-name: fade-it-out;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: fade-it-out;
+    -webkit-animation-duration: 0.25s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.js-fade-in {
+    animation-name: fade-it-in;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: fade-it-in;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.js-visible {
+    animation-name: fade-it-in;
+    animation-duration: 0.35s;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: fade-it-in;
+    -webkit-animation-duration: 0.35s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.js-block {
+    display:block;
+}
