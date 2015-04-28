@@ -55,21 +55,27 @@ ul {
 	font-size:inherit;
 }
 
-.main-nav:after {
+.header:after {
 	content: '';
 	clear: both;
 	display: table;
 }
 
-.main-nav {
+.header {
 	position:relative;
 	width:100%;
+}
+
+.main-nav {
+	position:relative;
+	width:auto;
+	float:right;
 	margin-bottom:30px;
 
 	li {
 		position: relative;
 		display: block;
-		float: right;
+		float: left;
 		border-left: 1px solid rgb(69, 67, 67);
 
 		&:last-child {
@@ -107,7 +113,6 @@ ul {
 		&#primary-buy-btn:hover {
 			text-decoration: underline;
 		}
-
 	}
 }
 
@@ -128,7 +133,7 @@ ul {
 	display:none;
 }
 
-#home {
+#panel1 {
 	background-color:#333;
 }
 

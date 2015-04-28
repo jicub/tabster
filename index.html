@@ -5,6 +5,10 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+
 	<title>Tabster</title>
 
 	<!-- Fonts -->
@@ -16,25 +20,27 @@
 </head>
 <body>
 	<div class="page">
-		<ul class="main-nav">
-			<li>
-				<a href="#panel3" data-url="panel3">Panel_3</a>
-			</li>
-			<li>
-				<a href="#panel2" data-url="panel2">Panel_2</a>
-			</li>
-			<li>
-				<a href="#home" data-url="home">Panel_1</a>
-			</li>
-		</ul>
-		<div class="panel" id="panel3">
-			<h1>Panel 3</h1>
+		<div class="header">
+			<ul class="main-nav">
+				<li>
+					<a href="#panel1" data-url="panel1">Panel_1</a>
+				</li>
+				<li>
+					<a href="#panel2" data-url="panel2">Panel_2</a>
+				</li>
+				<li>
+					<a href="#panel3" data-url="panel3">Panel_3</a>
+				</li>
+			</ul>
+		</div>
+		<div class="panel js-block js-fade-in" id="panel1">
+			<h1>Panel 1</h1>
 		</div>
 		<div class="panel" id="panel2">
 			<h1>Panel 2</h1>
 		</div>
-		<div class="panel js-block js-fade-in" id="home">
-			<h1>Panel 1</h1>
+		<div class="panel" id="panel3">
+			<h1>Panel 3</h1>
 		</div>
 	</div>
 

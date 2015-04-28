@@ -1,17 +1,16 @@
 var routing = (function(){
-	//var currentLink;
 
-	var _getURL = function() {
+	var _getURL = function(){
 		var url = window.location.href;
 
 		return url;
 	};
 
-	var _getHashFragment = function() {
+	var _getHashFragment = function(){
 		var url = window.location.href,
 			hashFragment = url.split('#')[1];
 
-			return hashFragment;
+		return hashFragment;
 	};
 
 	var _updatePushState = function(){
@@ -24,8 +23,15 @@ var routing = (function(){
 		);
 	};
 
-	var _fadeInFragment = function () {
-		//init js/panelAnimation.js
+	var _fadeInFragment = function(){
+		//Catch browser error on page refresh
+		try{
+			if(window.history.state.name);
+		}catch(err){
+			_updatePushState();
+		}
+
+		//Init js/panelAnimation.js
 		window.panelAnimation.showPanel(window.history.state.name);
 	};
 
